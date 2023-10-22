@@ -1,4 +1,9 @@
+import { useContext } from "react";
+import notiContext from "../NotiContext";
+
 const Notification = () => {
+  const [noti, dispatch] = useContext(notiContext);
+
   const style = {
     border: "solid",
     padding: 10,
@@ -6,9 +11,7 @@ const Notification = () => {
     marginBottom: 5,
   };
 
-  if (true) return null;
-
-  return <div style={style}></div>;
+  return <div style={style}>{noti}</div>;
 };
 
 export default Notification;
