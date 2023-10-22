@@ -8,7 +8,7 @@ import {
 const Anecdotes = () => {
   const anecdotess = useSelector((state) => {
     const x = new RegExp(state.filter, "i");
-    return state.anecdotes.filter((anecdote) => anecdote.content);
+    return state.anecdotes.filter((anecdote) => anecdote.content.match(x));
   });
   const dispatch = useDispatch();
 
